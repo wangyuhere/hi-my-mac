@@ -13,3 +13,24 @@
 [submodule "sublime/Packages/Emmet"]
 	path = sublime/Packages/Emmet
 	url = git@github.com:sergeche/emmet-sublime.git
+[submodule "sublime/Packages/Better CoffeeScript"]
+	path = sublime/Packages/Better CoffeeScript
+	url = git@github.com:aponxi/sublime-better-coffeescript.git
+[submodule "sublime/Packages/SublimeCodeIntel"]
+	path = sublime/Packages/SublimeCodeIntel
+	url = git://github.com/SublimeCodeIntel/SublimeCodeIntel.git
+[submodule "sublime/Packages/RubyTest"]
+	path = sublime/Packages/RubyTest
+	url = git@github.com:maltize/sublime-text-2-ruby-tests.git
+[submodule "sublime/Packages/SublimeERB"]
+	path = sublime/Packages/SublimeERB
+	url = git@github.com:eddorre/SublimeERB.git
+[submodule "sublime/Packages/ERB_snippets"]
+	path = sublime/Packages/ERB_snippets
+	url = git://github.com/matthewrobertson/ERB-Sublime-Snippets.git
+[submodule "sublime/Packages/RSpec"]
+	path = sublime/Packages/RSpec
+	url = git://github.com/SublimeText/RSpec.git
+[submodule "sublime/Packages/DocBlockr"]
+	path = sublime/Packages/DocBlockr
+	url = git@github.com:spadgos/sublime-jsdocs.git

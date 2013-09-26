@@ -2,6 +2,7 @@
 desc "install dotfiles, sublime etc on the mac"
 task :install do
   install_dotfiles
+  install_st3_packages
 end
 
 private
@@ -36,7 +37,8 @@ def install_dotfiles
   end
 end
 
-def install_sublime_text_3
-  package_path = '~/Library/Application\ Support/Sublime\ Text\ 3/Packages/'
-  git_remote = 'https://github.com/wbond/sublime_package_control.git'
+def install_st3_packages
+  source = "#{ENV['PWD']}/sublime/Packages"
+  target = '~/Library/Application\ Support/Sublime\ Text\ 3/Packages'
+  ln_nfs source, target
 end
