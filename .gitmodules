@@ -1,0 +1,15 @@
+[submodule "sublime/Packages/Package Control"]
+	path = sublime/Packages/Package Control
+	url = git@github.com:wbond/sublime_package_control.git
+[submodule "sublime/Packages/Git"]
+	path = sublime/Packages/Git
+	url = git://github.com/kemayo/sublime-text-2-git.git
+[submodule "sublime/Packages/SideBarEnhancements"]
+	path = sublime/Packages/SideBarEnhancements
+	url = git://github.com/titoBouzout/SideBarEnhancements.git
+[submodule "sublime/Packages/TrailingSpaces"]
+	path = sublime/Packages/TrailingSpaces
+	url = git://github.com/SublimeText/TrailingSpaces.git
+[submodule "sublime/Packages/Emmet"]
+	path = sublime/Packages/Emmet
+	url = git@github.com:sergeche/emmet-sublime.git

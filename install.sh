@@ -10,7 +10,8 @@ echo "Installing GUI applications ..."
 brew tap phinze/homebrew-cask
 brew install brew-cask
 apps=('google-chrome' 'google-drive' 'iterm2' 'dropbox' 'firefox' 'skype' 'spotify' \
-  'virtualbox' 'github' 'flux' 'kindle' 'alfred')
+      'virtualbox' 'github' 'flux' 'kindle' 'alfred' 'u-torrent' 'vagrant' 'unrarx' \
+      'mplayerx' 'cheat-sheet' 'calibre' 'ichm' 'xunlei')
 for app in $apps; do
   echo "Installing $app ..."
   brew cask install $app
@@ -35,6 +36,7 @@ curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | 
 
 echo "Installing rbenv and ruby ..."
 brew install rbenv
+eval "$(rbenv init -)"
 brew install rbenv-gem-rehash
 brew install ruby-build
 rbenv install 1.9.3-p327
@@ -45,3 +47,5 @@ rbenv rehash
 gem update --system
 gem install bundler pg rails unicorn pry --no-document
 brew install heroku-toolbelt
+
+cd $(dirname $0) && rake install

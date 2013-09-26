@@ -35,3 +35,8 @@ def install_dotfiles
     ln_nfs source, target
   end
 end
+
+def install_sublime_text_3
+  package_path = '~/Library/Application\ Support/Sublime\ Text\ 3/Packages/'
+  git_remote = 'https://github.com/wbond/sublime_package_control.git'
+end
