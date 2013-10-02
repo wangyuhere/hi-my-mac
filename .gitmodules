@@ -34,3 +34,6 @@
 [submodule "sublime/Packages/DocBlockr"]
 	path = sublime/Packages/DocBlockr
 	url = git@github.com:spadgos/sublime-jsdocs.git
+[submodule "sublime/Packages/SCSS"]
+	path = sublime/Packages/SCSS
+	url = git@github.com:MarioRicalde/SCSS.tmbundle.git

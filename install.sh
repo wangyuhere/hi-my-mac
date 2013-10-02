@@ -20,18 +20,18 @@ brew cask alfred link
 brew cask alfred status
 
 echo "Installing tools and packages ..."
-libs=('postgres' 'redis' 'vim' 'ctags' 'imagemagick' 'qt' 'openssl' 'wget' 'mysql' 'sqlite' 'nginx' 'node')
+libs=('postgres' 'redis' 'vim' 'ctags' 'imagemagick' 'qt' 'openssl' 'wget' 'mysql' \
+      'sqlite' 'nginx' 'node' 'youtube-dl')
 for lib in $libs; do
   echo "Installing $lib ..."
   brew install $lib
 done
 
+echo "Installing zsh and oh-my-zsh ..."
 brew install zsh
 if [[ -f /etc/zshenv ]]; then
   sudo mv /etc/zshenv /etc/zprofile
 fi
-
-echo "Installing oh-my-zsh ..."
 curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
 
 echo "Installing rbenv and ruby ..."
@@ -48,4 +48,4 @@ gem update --system
 gem install bundler pg rails unicorn pry --no-document
 brew install heroku-toolbelt
 
-cd $(dirname $0) && rake install
+cd $(dirname $0) && bundle && rake install

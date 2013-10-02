@@ -1,8 +1,24 @@
+require 'fileutils'
+require './config/boot'
 
 desc "install dotfiles, sublime etc on the mac"
-task :install do
-  install_dotfiles
-  install_st3_packages
+task :install => [:link_dotfiles, :link_st3_packages] do
+  FileUtils.mkdir_p HiMyMac.logs_path
+end
+
+desc "link dotfiles"
+task :link_dotfiles do
+  link_dotfiles
+end
+
+desc "link sublime text 3 packages"
+task :link_st3_packages do
+  link_st3_packages
+end
+
+desc "show hi-my-mac path"
+task :show_path do
+  puts HiMyMac.path
 end
 
 private
@@ -21,7 +37,7 @@ def ln_nfs(source, target)
   run %{ ln -nfs "#{source}" "#{target}" }
 end
 
-def install_dotfiles
+def link_dotfiles
   files = %w(
     oh-my-zsh/custom/plugins
     oh-my-zsh/custom/wangyuhere.zsh-theme
@@ -30,15 +46,15 @@ def install_dotfiles
     zshrc
   )
   files.each do |file|
-    source = "#{ENV['PWD']}/dotfiles/#{file}"
-    target = "#{ENV['HOME']}/.#{file}"
+    source = File.join HiMyMac.dotfiles_path, file
+    target = File.join ENV['HOME'], file
 
     ln_nfs source, target
   end
 end
 
-def install_st3_packages
-  source = "#{ENV['PWD']}/sublime/Packages"
+def link_st3_packages
+  source = File.join HiMyMac.sublime_path, 'Packages'
   target = '~/Library/Application\ Support/Sublime\ Text\ 3/Packages'
   ln_nfs source, target
 end
