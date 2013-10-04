@@ -56,5 +56,6 @@ end
 def link_st3_packages
   source = File.join HiMyMac.sublime_path, 'Packages'
   target = '~/Library/Application\ Support/Sublime\ Text\ 3/Packages'
-  ln_nfs source, target
+  run %{ mv #{target} #{target}.backup }
+  run %{ ln -nfs #{source} #{target} }
 end

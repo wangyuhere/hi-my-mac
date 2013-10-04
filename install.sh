@@ -12,7 +12,8 @@ brew install brew-cask
 apps=('google-chrome' 'google-drive' 'iterm2' 'dropbox' 'firefox' 'skype' 'spotify' \
       'virtualbox' 'github' 'flux' 'kindle' 'alfred' 'u-torrent' 'vagrant' 'unrarx' \
       'mplayerx' 'cheat-sheet' 'calibre' 'ichm' 'xunlei')
-for app in $apps; do
+for app in ${apps[@]}
+do
   echo "Installing $app ..."
   brew cask install $app
 done
@@ -20,9 +21,10 @@ brew cask alfred link
 brew cask alfred status
 
 echo "Installing tools and packages ..."
-libs=('postgres' 'redis' 'vim' 'ctags' 'imagemagick' 'qt' 'openssl' 'wget' 'mysql' \
+libs=('vim' 'ctags' 'imagemagick' 'qt' 'openssl' 'wget' 'readline' 'libxml2' \
       'sqlite' 'nginx' 'node' 'youtube-dl')
-for lib in $libs; do
+for lib in ${libs[@]}
+do
   echo "Installing $lib ..."
   brew install $lib
 done
@@ -45,7 +47,7 @@ rbenv global 2.0.0-p247
 rbenv rehash
 
 gem update --system
-gem install bundler pg rails unicorn pry --no-document
+gem install bundler rails unicorn pry --no-document
 brew install heroku-toolbelt
 
 cd $(dirname $0) && bundle && rake install
