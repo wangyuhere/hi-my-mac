@@ -37,3 +37,6 @@
 [submodule "sublime/Packages/SCSS"]
 	path = sublime/Packages/SCSS
 	url = git@github.com:MarioRicalde/SCSS.tmbundle.git
+[submodule "sublime/Packages/CTags"]
+	path = sublime/Packages/CTags
+	url = git@github.com:SublimeText/CTags.git
