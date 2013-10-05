@@ -43,11 +43,12 @@ def link_dotfiles
     oh-my-zsh/custom/wangyuhere.zsh-theme
     gemrc
     gitconfig
+    powconfig
     zshrc
   )
   files.each do |file|
     source = File.join HiMyMac.dotfiles_path, file
-    target = File.join ENV['HOME'], file
+    target = File.join ENV['HOME'], ".#{file}"
 
     ln_nfs source, target
   end
