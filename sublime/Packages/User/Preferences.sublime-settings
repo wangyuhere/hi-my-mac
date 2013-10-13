@@ -1,11 +1,11 @@
 {
 	"color_scheme": "Packages/Color Scheme - Default/Solarized (Light).tmTheme",
+	"ensure_newline_at_eof_on_save": true,
 	"font_size": 15.0,
 	"git_binary": "/usr/bin/git",
 	"ignored_packages":
 	[
 	],
 	"tab_size": 2,
-	"translate_tabs_to_spaces": true,
-  "ensure_newline_at_eof_on_save": true
+	"translate_tabs_to_spaces": true
 }
