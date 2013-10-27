@@ -6,3 +6,4 @@ gem 'whenever'
 
 gem 'rake'
 gem 'rspec'
+gem 'pry'
