@@ -40,7 +40,7 @@ class BooksUpdater
   end
 
   def notify_new_chapters(id, list)
-    return unless File.exists?(book_file(id))
+    return 0 unless File.exists?(book_file(id))
 
     old_list = YAML.load_file(book_file(id))
     last_chapter = old_list.last unless old_list.nil?
@@ -52,14 +52,16 @@ class BooksUpdater
       notify_count += 1
       break if notify_count > 5
     end
+    notify_count
   end
 
   def update_book(id)
     doc = Nokogiri::HTML(open(book_url(id), 'r:GBK'), nil, 'GBK')
     list = doc.css('ul#chapterlist li a').map { |a| {title: a.attribute('title').to_s, href: a.attribute('href').to_s} }
-    notify_new_chapters(id, list)
-    file = open(book_file(id), 'w')
-    file.write(list.to_yaml)
+    if notify_new_chapters(id, list) > 0
+      file = open(book_file(id), 'w')
+      file.write(list.to_yaml)
+    end
   end
 
 end
