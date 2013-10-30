@@ -40,3 +40,6 @@
 [submodule "sublime/Packages/CTags"]
 	path = sublime/Packages/CTags
 	url = git@github.com:SublimeText/CTags.git
+[submodule "sublime/Packages/GoSublime"]
+	path = sublime/Packages/GoSublime
+	url = git@github.com:DisposaBoy/GoSublime.git
