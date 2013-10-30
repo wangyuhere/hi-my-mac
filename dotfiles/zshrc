@@ -4,7 +4,7 @@ DISABLE_AUTO_UPDATE="true"
 
 plugins=(git brew vi-mode heroku rails ruby bundler wangyuhere)
 
-export PATH="/usr/local/sbin:/usr/local/bin:$PATH"
+export PATH="/usr/local/Cellar/go/1.1.2/bin:/usr/local/sbin:/usr/local/bin:$PATH"
 export EDITOR="st -w"
 
 source $ZSH/oh-my-zsh.sh
