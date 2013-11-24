@@ -43,3 +43,6 @@
 [submodule "sublime/Packages/GoSublime"]
 	path = sublime/Packages/GoSublime
 	url = git@github.com:DisposaBoy/GoSublime.git
+[submodule "sublime/Packages/sublime-github"]
+	path = sublime/Packages/sublime-github
+	url = git@github.com:bgreenlee/sublime-github.git
