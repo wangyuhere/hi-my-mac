@@ -44,6 +44,8 @@ def link_dotfiles
     gemrc
     gitconfig
     powconfig
+    vimrc
+    vimrc.bundles
     zshrc
   )
   files.each do |file|
