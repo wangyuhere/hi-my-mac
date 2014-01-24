@@ -1,6 +1,8 @@
 {
 	"installed_packages":
 	[
+		"CoffeeCompile",
+		"GitHubinator",
 		"JSHint",
 		"Package Control",
 		"RubyTest"
