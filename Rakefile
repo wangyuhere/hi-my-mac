@@ -44,6 +44,7 @@ def link_dotfiles
     gemrc
     gitconfig
     powconfig
+    pryrc
     vimrc
     vimrc.bundles
     zshrc
