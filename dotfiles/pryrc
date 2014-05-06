@@ -1,8 +1,13 @@
-if defined?(PryDebugger)
-  Pry.commands.alias_command 'c', 'continue'
-  Pry.commands.alias_command 's', 'step'
-  Pry.commands.alias_command 'n', 'next'
-  Pry.commands.alias_command 'f', 'finish'
+Pry.config.editor = "st -w"
+
+if defined? Rails
+  require 'rails/console/app'
+  extend Rails::ConsoleMethods
 end
 
-Pry.config.editor = "st -w"
+class Object
+  def _st(method_name)
+    file, line = method(method_name).source_location
+    `st '#{file}:#{line}'`
+  end
+end
