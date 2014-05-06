@@ -1,6 +1,12 @@
 {
 	"color_scheme": "Packages/Color Scheme - Default/Sunburst.tmTheme",
 	"ensure_newline_at_eof_on_save": true,
+	"file_exclude_patterns":
+	[
+		".tags",
+		".tags_sorted_by_file",
+		".gemtags"
+	],
 	"font_size": 15.0,
 	"git_binary": "/usr/bin/git",
 	"ignored_packages":

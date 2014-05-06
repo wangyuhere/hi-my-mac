@@ -3,8 +3,10 @@
 	[
 		"CoffeeCompile",
 		"GitHubinator",
+		"Handlebars",
 		"JSHint",
 		"Package Control",
+		"RailsGoToSpec",
 		"Ruby Slim",
 		"RubyTest"
 	]
