@@ -29,7 +29,9 @@ def run(cmd)
 end
 
 def ln_nfs(source, target)
+  target_backup = "#{target}.backup"
   if File.exists?(target) && (!File.symlink?(target) || (File.symlink?(target) && File.readlink(target) != source))
+    run %{ rm -rf "#{target_backup}" } if File.exists? target_backup
     puts "[Moving] #{target} to #{target}.backup"
     run %{ mv "#{target}" "#{target}.backup" }
   end
