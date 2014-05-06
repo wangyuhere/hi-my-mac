@@ -11,6 +11,7 @@ alias gi="gem install"
 alias migrate="rake db:migrate db:rollback && rake db:migrate db:test:prepare"
 alias s="rspec"
 alias ss="bundle exec spring rspec"
+alias rpry="pry -r ./config/environment"
 
 bindkey "^A" beginning-of-line
 bindkey "^E" end-of-line
