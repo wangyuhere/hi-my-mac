@@ -9,3 +9,7 @@ set :job_template, %Q{bash -l -c 'export PATH="$HOME/.rbenv/bin:$PATH"; eval "$(
 every 30.minutes do
   command "#{ruby_path} #{scripts_path}/read.rb", output: "#{logs_path}/read.log"
 end
+
+every 1.hour do
+  command "cd /Users/yuwang/Projects/keywords && bundle exec rake keywords:all", output: "#{logs_path}/keywords_import.log"
+end
