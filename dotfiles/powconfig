@@ -1,2 +1,4 @@
 eval "$(rbenv init -)"
 export PATH=$(rbenv root)/shims:$(rbenv root)/bin:$PATH
+export POW_TIMEOUT=7200
+
